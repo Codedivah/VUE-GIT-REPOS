@@ -73,7 +73,7 @@ onMounted(() => {
             <a v-bind:href="repo.forks_url">Forked from {{ repo.forks_url }}</a>
                            <p>{{ repo.language }}</p>
               <p>Updated on {{ convertDate(repo.updated_at) }}</p>
-              </li>
+              </li> 
            
           
         </ul>
