@@ -5,127 +5,173 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header class="header">
-  <h1 class="logo">CodeDivah</h1>
-  <input type="checkbox" id="check" />
- <label class="showbtn" for="check"><p>&#9776;</p></label> 
-  
-      <ul class="menu">
-        <RouterLink  to="/"  >Home</RouterLink>
-        <RouterLink to="/repos"   >Repo-List</RouterLink>
+    <h1 class="logo">CodeDivah</h1>
+    <input type="checkbox" id="check" />
+    <label class="showbtn" for="check">
+      <p>&#9776;</p>
+    </label>
 
-        <label  class="hidebtn" for="check" ><p>&#x2715</p></label>
-              
-            </ul>
-    
+    <ul class="menu">
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/repos">Repo-List</RouterLink>
+
+      <label class="hidebtn" for="check">
+        <p>&#x2715</p>
+      </label>
+
+    </ul>
+
   </header>
- 
-    <div class="git-container">
-    
 
-  <div  class="img-container">
+  <div class="git-container">
 
-  <div>
-          <img class="img"
-         
-          src="https://avatars.githubusercontent.com/u/95576634?v=4"
-          alt="Fatimah"
-        />
+
+    <div class="img-container">
+      <div>
+        <img class="img" src="https://avatars.githubusercontent.com/u/95576634?v=4" alt="Fatimah" />
 
         <h1>FATIMAH BADMUS</h1>
         <p class="username">Codedivah</p>
-        <p>Frontend Engineering Student  <span><a href="https://github.com/AltSchool" alt="AltSchool Africa">@AltSchool Africa.</a> </span></p>
-        
-        
+        <p>Frontend Engineering Student <span><a href="https://github.com/AltSchool" alt="AltSchool Africa">@AltSchool
+              Africa.</a> </span></p>
+
         <div>
           <button class="edit">Edit profile</button>
         </div>
       </div>
-   
- 
-</div>
-<div>
-  <RouterView />
-</div>
+    </div>
+
+    <div>
+      <RouterView />
+    </div>
+
+  </div>
 
 
-</div>
-<footer> Designed by codedivah</footer>
+  <footer> Designed by codedivah</footer>
 </template>
 
 <style scoped>
- 
 .header {
   display: flex;
- height:100px;
+  height: 100px;
   background-color: black;
   padding: 0px 5%;
-  color:goldenrod;
+  color: goldenrod;
   align-items: center;
 
- 
+
 }
 
-.logo{
+.logo {
   display: flex;
-  float:left
+  float: left
 }
 
 
-.menu{
+.menu {
 
   display: flex;
   margin-left: auto;
   justify-content: center;
 }
 
-.menu a{
+.menu a {
 
-  color:whitesmoke;
+  color: whitesmoke;
   text-transform: uppercase;
   font-weight: bold;
   padding: 0 10px;
   text-decoration: none;
 }
 
-.showbtn,.hidebtn{
+.showbtn,
+.hidebtn {
 
   transition: 0.4s;
   font-size: 30px;
   cursor: pointer;
-  user-select: none; 
+  user-select: none;
   display: none;
 }
 
-.showbtn{
-margin-left: auto;
+.showbtn {
+  margin-left: auto;
 
 }
 
-.showbtn p{
+.showbtn p {
   line-height: 100px;
 
 }
 
-.menu a:hover,.showbtn:hover,.hidebtn:hover{
- color:coral;
+.menu a:hover,
+.showbtn:hover,
+.hidebtn:hover {
+  color: coral;
 
 }
 
-#check{
-position:absolute;
-visibility: hide;
-z-index: -1111;
+#check {
+  position: absolute;
+  visibility: hide;
+  z-index: -1111;
 
 }
 
-@media screen and (max-width: 800px) { 
 
-    .showbtn,.hidebtn{
-    display:block ;
-  }
-  .menu{
+.git-container {
+  display: flex;
+  gap: 40px;
+  padding-left: 30px;
+  background-color: whitesmoke;
+}
+
+.img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.username {
+  font-weight: 700;
+  margin-top: -20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 20px;
+  color: grey;
+
+}
+
+.edit {
+  width: 100%;
+  padding: 5px 15px;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+
+}
+
+footer {
+  text-align: center;
+  background-color: rgb(26, 25, 25);
+  color: white;
+  padding: 40px;
+  margin-top: 10px;
+
+}
+
+@media screen and (max-width: 800px) {
+
+  .showbtn,
+  .hidebtn {
     display: block;
-    position:fixed;
+  }
+
+  .menu {
+    display: block;
+    position: fixed;
     width: 100%;
     height: 15vh;
     background: black;
@@ -139,76 +185,32 @@ z-index: -1111;
     transition: 0.7s;
   }
 
-  .hidebtn{
+  .hidebtn {
     position: absolute;
     top: 5px;
     right: 30px;
     color: goldenrod;
   }
 
-  #check:checked ~ .menu{
-    right:0 ;
-  } 
+  #check:checked~.menu {
+    right: 0;
+  }
 
-  .menu a{
+  .menu a {
     display: block;
     padding: 20px;
   }
 
-  .git-container[data-v-8620aa60] {
-  display: block;
-  gap: 40px;
-  padding-left: 30px;
-  background-color: whitesmoke;
-}
 
-.git-container{
-  display: block;
-}
+
+  .git-container {
+    /* display: block; */
+    flex-direction: column;
+
+    }
 }
 
 
 
-.git-container{
-  display: flex;
-  gap: 40px;
-  padding-left: 30px;
-  background-color: whitesmoke;
-}
-
-.img{
-width: 300px;
-height: 300px;
-border-radius: 50%;
-object-fit: cover;
-margin-top: 20px;
-}
-
-.username{
-  font-weight: 700;
-   margin-top: -20px;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
-  font-size: 20px;
-  color: grey;
-  
-}
-
-.edit{
-  width: 100%;
-padding:5px 15px;
-font-weight: bold;
-color: white;
-background-color: black;
-
-}
-
-footer{
-  text-align: center;
-  background-color: rgb(26, 25, 25);
-  color: white;
-  padding: 40px;
-  margin-top: 10px;
-  
-}
 
 </style>
