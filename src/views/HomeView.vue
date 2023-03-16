@@ -4,6 +4,7 @@
 
 <template>
   <div class="about">
+  
     <h1 class="title">MY GIT-HUB REPOSITORY</h1>
     <hr class="break" />
     <div class="socials">
@@ -45,6 +46,7 @@
       and Designs are important.
     </p>
   </div>
+
 </template>
 
 <style scoped>
@@ -110,10 +112,6 @@ gap: 8px;
     width: 100%;
     margin: 5px 0;
     justify-content: center;
-
-   
-
-
   }
 
 }

@@ -23,6 +23,7 @@ import { RouterLink, RouterView } from 'vue-router'
     
 
   <div  class="img-container">
+
   <div>
           <img class="img"
          
@@ -159,6 +160,10 @@ z-index: -1111;
   gap: 40px;
   padding-left: 30px;
   background-color: whitesmoke;
+}
+
+.git-container{
+  display: block;
 }
 }
 
