@@ -60,6 +60,17 @@ const fetchData = async () => {
         <h3>Stars:</h3> {{repo.stargazers_count}}
       </p>
 
-      <button className="btn" @click="router.push('/')">Back</button>
+      <button class="btn" @click="router.push('/')">Back</button>
     </div>
 </template>
+
+<style scoped>
+.btn{
+ background-color: black;
+ color: white;
+ width: 80px;
+ border-radius: 5px;
+ padding: 5px;
+
+}
+</style>

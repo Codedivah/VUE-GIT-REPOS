@@ -10,8 +10,8 @@ import { RouterLink, RouterView } from 'vue-router'
  <label class="showbtn" for="check"><p>&#9776;</p></label> 
   
       <ul class="menu">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/repos">Repo-List</RouterLink>
+        <RouterLink  to="/"  >Home</RouterLink>
+        <RouterLink to="/repos"   >Repo-List</RouterLink>
 
         <label  class="hidebtn" for="check" ><p>&#x2715</p></label>
               
@@ -22,25 +22,33 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="git-container">
     
 
-  
+  <div  class="img-container">
   <div>
-        <img
-          class="img"
+          <img class="img"
+         
           src="https://avatars.githubusercontent.com/u/95576634?v=4"
           alt="Fatimah"
         />
-        <h1>Fatimah Badmus</h1>
+
+        <h1>FATIMAH BADMUS</h1>
         <p class="username">Codedivah</p>
-        <a href="https://github.com/AltSchool" alt="AltSchool Africa"
-          >Frontend Engineering Student @AltSchool Africa</a
-        >
+        <p>Frontend Engineering Student  <span><a href="https://github.com/AltSchool" alt="AltSchool Africa">@AltSchool Africa.</a> </span></p>
+        
+        
         <div>
           <button class="edit">Edit profile</button>
         </div>
       </div>
    
+ 
+</div>
+<div>
   <RouterView />
 </div>
+
+
+</div>
+<footer> Designed by codedivah</footer>
 </template>
 
 <style scoped>
@@ -75,6 +83,7 @@ import { RouterLink, RouterView } from 'vue-router'
   text-transform: uppercase;
   font-weight: bold;
   padding: 0 10px;
+  text-decoration: none;
 }
 
 .showbtn,.hidebtn{
@@ -117,11 +126,11 @@ z-index: -1111;
     display: block;
     position:fixed;
     width: 100%;
-    height: 50vh;
-    background: gray;
+    height: 15vh;
+    background: black;
     color: rgb(136, 18, 18);
     right: -100%;
-    top: -10px;
+    top: -20px;
     padding: 60px 0;
     z-index: 3;
     text-align: center;
@@ -133,6 +142,7 @@ z-index: -1111;
     position: absolute;
     top: 5px;
     right: 30px;
+    color: goldenrod;
   }
 
   #check:checked ~ .menu{
@@ -143,8 +153,57 @@ z-index: -1111;
     display: block;
     padding: 20px;
   }
+
+  .git-container[data-v-8620aa60] {
+  display: block;
+  gap: 40px;
+  padding-left: 30px;
+  background-color: whitesmoke;
+}
 }
 
 
+
+.git-container{
+  display: flex;
+  gap: 40px;
+  padding-left: 30px;
+  background-color: whitesmoke;
+}
+
+.img{
+width: 300px;
+height: 300px;
+border-radius: 50%;
+object-fit: cover;
+margin-top: 20px;
+}
+
+.username{
+  font-weight: 700;
+   margin-top: -20px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 20px;
+  color: grey;
+  
+}
+
+.edit{
+  width: 100%;
+padding:5px 15px;
+font-weight: bold;
+color: white;
+background-color: black;
+
+}
+
+footer{
+  text-align: center;
+  background-color: rgb(26, 25, 25);
+  color: white;
+  padding: 40px;
+  margin-top: 10px;
+  
+}
 
 </style>

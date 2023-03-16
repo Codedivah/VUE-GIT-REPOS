@@ -46,16 +46,16 @@ onMounted(() => {
 
 <template>
   <div v-if="loading">loading...</div>
-  <main v-else>
-    <h1>My Exam Project</h1>
+  <main  v-else>
+    
     <div>
       
-      <div>
-        <h3>Github Repositories</h3>
+      <div class="Repos-container">
+        <h3 class="topic">Github Repositories</h3>
         <div >
-          <input class="input" type="text" placeholder="Find a repository" />
+          <input class="input" type="text" placeholder="Find a repository..." disabled />
           <label for="my-dropdown"></label>
-          <select id="my-dropdown" v-model="selectedOption">
+          <select id="my-dropdown" v-model="selectedOption" disabled>
             <option value="type" disabled selected>{{ type }}</option>
             <option v-for="option in options" :key="option.value" :value="option.value">
               {{ option.label }}
@@ -71,8 +71,7 @@ onMounted(() => {
             </h2>
            </RouterLink>
             <a v-bind:href="repo.forks_url">Forked from {{ repo.forks_url }}</a>
-              <p>{{ repo.description }}</p>
-              <p>{{ repo.language }}</p>
+                           <p>{{ repo.language }}</p>
               <p>Updated on {{ convertDate(repo.updated_at) }}</p>
               </li>
            
@@ -84,8 +83,8 @@ onMounted(() => {
     <div class="btn-container">
       <button :disabled="page == 1" @click="prev" class="btn">Prev</button>
 
-      <div>
-        <button
+      <div >
+        <button class="num"
           @click="handleRepos(btn)"
           v-for="btn in Math.ceil(repos.length / reposPerPage)"
           :key="btn"
@@ -106,82 +105,60 @@ onMounted(() => {
 </template>
 
 <style scoped>
-* {
-  box-sizing: border-box;
-  text-decoration: none;
-  
-}
-
-ul{
-  padding:0px;
-  }
-
-
-.img {
-  border: 1px solid grey;
-  border-radius: 50%;
-  object-fit: cover;
-  width: 300px;
-  height: 300px;
-}
-
-.btn-container {
-  display: flex;
-  justify-content: center;
-}
-
-.btn {
-  background-color: goldenrod;
-}
-
-.git-container {
-  display: flex;
-  gap: 100px;
-}
-
-.list {
-  width: 100%;
-  height: 100%;
-  border-bottom: 1px solid grey;
-  list-style: none;
-}
-
-.title {
-  color: rgb(0, 132, 255);
-}
-
-span {
-  font-size: 16px;
-  border: 1px solid grey;
-  border-radius: 2rem;
-  padding: 0 5px;
-  color: grey;
-  font-weight: lighter;
-}
-
-.list,
-p,
-a {
-  color: grey;
-}
-
-.edit {
-  padding: 5px 100px;
-  margin-top:20px;
+.topic{
+  text-align: center;
 }
 
 .input{
- padding: 5px 120px;
- border-radius: 0.2rem;
- border:1px solid grey;
-
+  width: 75%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-right: 6px;
+  border: 1px solid grey;
 }
 
-.username{
-font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color:grey;
+#my-dropdown{
+padding: 8px 12px;
+width: 15%;
+border-radius: 6px;
+border: 1px solid grey;
+}
+
+.title{
+  color: rgb(92, 92, 251);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
   font-size: 20px;
-
- 
 }
+
+.btn-container{
+  display: flex;
+  padding: 2px 5px;
+    justify-content: center;
+  
+}
+
+.btn:disabled{
+background-color: gray;
+}
+.btn{
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding:0 5px ;
+  margin: 0 10px;
+  }
+
+  .btn:hover{
+    background-color: green;
+  }
+
+  .num:hover{
+    background-color: black;
+    color: white;
+  }
+
+  .num{
+    margin-right: 10px;
+  }
 </style>
