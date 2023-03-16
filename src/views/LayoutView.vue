@@ -204,13 +204,18 @@ footer {
 
 
   .git-container {
-    /* display: block; */
     flex-direction: column;
+    padding-left: 0;
+    justify-content: center;
+   
 
     }
+
+    .img-container{
+      display: block;
+      text-align: center;
+      
+    }
 }
-
-
-
 
 </style>
