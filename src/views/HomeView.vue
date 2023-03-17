@@ -11,7 +11,7 @@
 
       <a class="social-link twitter"  href="https://twitter.com/Olaidebadmus_"
         >
-        <p> <i class="fa-brands fa-twitter"></i> Olaide Badmus</p>
+        <p> <i class="fa-brands fa-twitter"></i> Fatimah Badmus</p>
       </a>
       <a class="social-link linkedin" href="https://www.linkedin.com/in/fatimah-badmus-938991b9"
         >
