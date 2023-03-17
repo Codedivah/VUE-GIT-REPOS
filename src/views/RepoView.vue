@@ -60,7 +60,7 @@ const fetchData = async () => {
         <h3>Stars:</h3> {{repo.stargazers_count}}
       </p>
 
-      <button class="btn" @click="router.push('/')">Back</button>
+      <button class="btn" @click="router.push('/repos')">Back</button>
     </div>
 </template>
 
